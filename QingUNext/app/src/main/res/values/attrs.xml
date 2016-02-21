@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="dividerWidth" format="dimension"/>
+    <declare-styleable name="DividerTextView">
+        <attr name="line_start" format="float" />
+        <attr name="line_end" format="float" />
+    </declare-styleable>
+</resources>

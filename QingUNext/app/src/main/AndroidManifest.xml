@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.qingunext.app">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:name=".QingUApp"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+
+        <activity
+                android:name=".page_home.NewQingUActivity"
+                android:label="@string/app_name">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                        android:host="m.byr.cn"
+                        android:scheme="http"/>
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".page_thread.ReplyActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                        android:host="bbs.byr.cn"
+                        android:pathPrefix="/#!article/"
+                        android:scheme="http"/>
+                <data
+                        android:host="m.byr.cn"
+                        android:pathPrefix="/article/"
+                        android:scheme="http"/>
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".pages_other.UserActivity"/>
+        <activity
+                android:name=".page_board.BoardActivity"
+                android:windowSoftInputMode="adjustNothing"/>
+        <activity android:name=".pages_other.InputActivity"/>
+        <activity android:name=".pages_other.SignInActivity"/>
+        <activity android:name=".notifications.NotiActivity"
+                  android:launchMode="singleTask"/>
+        <activity android:name=".notifications.MailActivity"/>
+        <activity android:name=".notifications.MailBoxActivity"
+                  android:launchMode="singleTask"/>
+        <activity android:name=".page_thread.ImageActivity"/>
+        <service android:name=".services.NotiService"/>
+    </application>
+
+
+</manifest>

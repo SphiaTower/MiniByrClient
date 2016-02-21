@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background ="?android:attr/selectableItemBackground"
+    android:padding="13dp"
+    android:id="@+id/rlBPPostListItem">
+
+    <view
+        android:id="@+id/cvBPReplyCnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
+        class="android.support.v7.widget.CardView">
+
+        <TextView
+            android:id="@+id/tvBPReplyCnt"
+            android:layout_width="50dp"
+            android:padding="6dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+            android:text="00"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:background="@color/background_dark_blue" />
+    </view>
+
+    <RelativeLayout
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/cvBPReplyCnt"
+        android:layout_toEndOf="@id/cvBPReplyCnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Title"
+            android:paddingBottom="5dp"
+            android:id="@+id/tvBPPostTitle"
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_below="@id/tvBPPostTitle"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="time"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/tvBPLastReplyTime" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="author"
+                android:id="@+id/tvBPPostAuthor"
+            />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="lastreply"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:id="@+id/tvBPLastReplyAuthor" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

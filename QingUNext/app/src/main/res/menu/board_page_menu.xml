@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_item_share"
+        android:showAsAction="ifRoom"
+        android:title="Share"
+        android:actionProviderClass=
+            "android.widget.ShareActionProvider" />
+
+    <!--android:icon="@android:drawable/ic_input_add"-->
+    <item
+        android:showAsAction="ifRoom|withText"
+        android:id="@+id/mailBox"
+        android:title="收件箱"/>
+    <item
+        android:icon="@android:drawable/ic_notification_clear_all"
+        android:title="切换账户"
+        android:id="@+id/switchAccount" />
+    <item
+        android:title="test"
+        android:visible="true"
+        android:id="@+id/test" />
+    <item
+        android:title="清除缓存"
+        android:id="@+id/clearCache" />
+</menu>

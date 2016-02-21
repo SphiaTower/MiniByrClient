@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/rlReplyContainer"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:paddingEnd="3dp"
+                android:paddingStart="3dp"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:id="@+id/rlUserSpan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:paddingEnd="3dp"
+            android:paddingStart="3dp"
+            android:background="@android:color/transparent"
+            android:layout_alignParentTop="true">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivReplyFace"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius="5dp"
+                android:maxHeight="45dp"
+                android:padding="3dp"
+                app:riv_oval="false"
+                app:riv_mutate_background="true"
+                android:background="@android:color/transparent"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:contentDescription="@string/face_description"
+                android:src="@drawable/ic_insert_emoticon_black_24dp"/>
+
+        <TextView
+                android:id="@+id/tvReplyUserName"
+                android:layout_width="wrap_content"
+                android:maxWidth="220dp"
+                android:maxLines="2"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/ivReplyFace"
+                android:layout_toRightOf="@id/ivReplyFace"
+                android:text="New Text"
+
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/reply_username"/>
+
+        <TextView
+                android:id="@+id/tvReplyUserID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:paddingLeft="1dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/tvReplyUserName"
+                android:layout_toRightOf="@id/tvReplyUserName"
+                android:text="New Text"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/reply_id"
+                android:textStyle="italic"/>
+        <TextView
+                android:id="@+id/tvReplyTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:text="2小时"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <TextView
+                android:id="@+id/tvReplyFloorCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:text="#1"
+                android:visibility="gone"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+    </RelativeLayout>
+
+    <FrameLayout android:layout_below="@id/rlUserSpan"
+                 android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.example.qingunext.app.page_thread.ReplyView
+                android:id="@+id/wvReplyContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="4dp"
+                android:paddingTop="4dp"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"/>
+        <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                     android:src="@drawable/ic_more_vert_black_24dp"
+                     android:layout_gravity="bottom|end"
+                     android:tint="@android:color/darker_gray"
+
+                     android:background="@android:color/transparent"
+                     android:padding="6dp"
+                     android:id="@+id/reply_options"/>
+    </FrameLayout>
+
+</RelativeLayout>

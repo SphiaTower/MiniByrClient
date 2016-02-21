@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:animateLayoutChanges="true"
+              android:layout_gravity="bottom"
+              android:orientation="horizontal"
+              android:id="@+id/bottom_bar"
+              android:visibility="invisible"
+              app:layout_behavior="com.example.qingunext.app.pull_to_refresh_auto_pager.LinearLayoutBehavior"
+              android:layout_height="?attr/actionBarSize">
+
+    <ImageButton
+            android:layout_width="0dp"
+            android:background="@color/background_material_light"
+
+            android:src="@drawable/ic_add_black_24dp"
+            android:layout_weight="1"
+            android:onClick="onClickNew"
+            android:layout_height="match_parent"/>
+
+    <View
+            android:layout_height="match_parent"
+            android:layout_width="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+
+            android:background="#DDD"
+            android:visibility="visible"/>
+
+    <ImageButton
+            android:layout_width="0dp"
+            android:background="@color/background_material_light"
+            android:onClick="onClickBookmark"
+            android:id="@+id/ivBottomBookmark"
+            android:layout_weight="1"
+
+            android:src="@drawable/ic_bookmark_border_black_24dp"
+            android:layout_height="match_parent"/>
+
+    <View
+            android:layout_height="match_parent"
+            android:layout_width="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#DDD"
+            android:visibility="visible"/>
+
+    <ImageButton
+            android:layout_width="0dp"
+            android:background="@color/background_material_light"
+            android:onClick="onClickElevate"
+
+            android:layout_weight="1"
+
+            android:tint="@android:color/black"
+            android:src="@drawable/ic_vertical_align_bottom_white_24dp"
+            android:layout_height="match_parent"/>
+
+</LinearLayout>
+

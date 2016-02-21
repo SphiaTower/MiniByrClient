@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+        android:id="@+id/tvGridItem"
+        android:layout_width="125dp"
+        android:padding="6dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_height="125dp"
+        android:textAppearance="?android:attr/textAppearanceLargeInverse"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:background="@color/background_dark_blue" xmlns:android="http://schemas.android.com/apk/res/android"/>

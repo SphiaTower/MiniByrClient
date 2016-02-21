@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:showAsAction="always"
+
+        android:title="@string/title_section_menu"
+        android:id="@+id/toSections" />
+    <item
+        android:showAsAction="ifRoom|withText"
+        android:id="@+id/mailBox"
+        android:title="收件箱" />
+    <item
+        android:showAsAction="ifRoom|withText"
+        android:id="@+id/notification"
+        android:title="文章回复" />
+    <!--android:icon="@android:drawable/ic_dialog_email"-->
+    <item
+            android:showAsAction="ifRoom|withText"
+            android:id="@+id/test"
+            android:title="test" />
+
+    <item
+        android:icon="@android:drawable/ic_dialog_email"
+        android:title="pref"
+        android:visible="false"
+        android:id="@+id/action_settings" />
+    <item
+        android:icon="@android:drawable/ic_notification_clear_all"
+        android:title="切换账户"
+        android:id="@+id/switchAccount" />
+    <item
+        android:title="Debug"
+        android:visible="true"
+        android:id="@+id/throwBug" />
+    <item
+        android:title="清除缓存"
+        android:id="@+id/clearCache" />
+</menu>

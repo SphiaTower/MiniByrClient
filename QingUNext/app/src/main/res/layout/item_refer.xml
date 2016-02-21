@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="5dp"
+    android:layout_height="match_parent">
+
+
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="6dp"
+        android:id="@+id/tvMailBoxPageIsRead"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_drafts_black_24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/tvMailBoxPageTitle"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/tvMailBoxPageIsRead"
+        android:layout_alignParentTop="true"
+        android:text="title"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/tvMailBoxPageTitle"
+        android:layout_below="@id/tvMailBoxPageTitle"
+        android:text="user"
+        android:id="@+id/tvMailBoxPageUser"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/tvMailBoxPageTime"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMailBoxPageTitle"
+        android:layout_alignParentEnd="true"
+        android:text="time"
+        />
+</RelativeLayout>

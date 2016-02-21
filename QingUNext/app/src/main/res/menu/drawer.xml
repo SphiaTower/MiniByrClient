@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navigation_item_1"
+            android:checked="true"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/navigation_item_1" />
+        <item
+            android:id="@+id/navigation_item_2"
+            android:icon="@drawable/ic_list_black_48dp"
+            android:title="@string/navigation_item_2" />
+        <item
+            android:id="@+id/navigation_item_3"
+            android:icon="@drawable/ic_bookmark_black_24dp"
+            android:title="@string/navigation_item_3" />
+        <item
+            android:id="@+id/navigation_subheader"
+            android:title="@string/navigation_subheader">
+            <menu>
+                <item android:title="fav boards" />
+            </menu>
+        </item>
+    </group>
+</menu>
